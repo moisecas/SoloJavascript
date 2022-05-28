@@ -94,6 +94,7 @@ switch (operacion) {
 
 //ejemplo 3 
 let color = prompt("Ingrese un color"); 
+color.toLocaleLowerCase(); //convierte a minusculas 
 switch (color) {
     case "rojo":
         console.log("Si hay rojo, hay mucho rojo");
