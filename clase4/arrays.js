@@ -137,7 +137,12 @@ console.log(cadena); //Bogota-Medellin-Cali-Barranquilla-Cartagena
 function buscarciudad(){
     let ciudadencontrar= prompt('Ingrese una ciudad').toLocaleLowerCase;
     ciudades.find(ciudades.toLocaleLowerCase() === ciudadencontrar);
+    //busca un elemento en el array retorna un booleano 
 }
+
+
+
+
 
 
 
