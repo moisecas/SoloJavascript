@@ -7,7 +7,12 @@ function credito(monto, plazo, interes) {
     let total = monto + intereses;
     let cuota = total / plazo;
     //return `El monto total a pagar es ${total} y la cuota mensual es ${cuota}`;
-    alert('su cuota es de ' + cuota); 
+    alert(nombre + ' su cuota es de ' + cuota); 
 }
-credito(100000,12,5); //llamada a la funcion  credito  
-console.log(credito(100000,12,5)); //llamada a la funcion  credito
+let monto = parseInt(prompt("Ingrese el monto que necesita para su crédito"));
+let plazo = parseInt(prompt("Ingrese el plazo en el que desea pagarlo"));
+let interes = parseInt(prompt("Ingrese el interés que le asigno el asesor"));
+credito(monto, plazo, interes);
+
+
+
