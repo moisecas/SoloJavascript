@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script defer src="js.js"></script>
+    <style>
+        .lineCheck {
+            text-decoration: line-through;
+        }
+        label {
+            background-color: white;
+            color: black;
+            font-weight: 800;
+        }
+        .hide {
+           opacity: 0;
+           position: absolute;
+           z-index: -1;
+        }
+        .show {
+            opacity: 1;
+            transition-duration: 500ms;
+            position: absolute;
+            top: 43px;
+            z-index: 1;
+            left: 50px;
+            animation: disappear 4000ms 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes disappear 
+        {
+            from {opacity: 1;}
+            to {opacity: 0;}
+        }
+        main {
+            margin: 0 auto;
+            position: relative;
+            width: clamp(200px, 100% ,400px);
+            height: 600px;
+            overflow: auto;
+            outline: 2px solid red;
+        }
+        .load {
+            position: absolute;
+            top: calc(50% - 14px);
+            left: calc(50% - 14px);
+        }
+        li {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text"  id="txt" autocomplete="off">
+        <label class="hide">Esta tarea ya fue agregada</label>
+        <input type="button" id="btn" value="agregar">
+        <input type="text"  id="search" autocomplete="off" placeholder="buscar 🔎">
+    </form>
+    <main id="mainId">
+        <ul id="list">
+
+        </ul>
+        <div id="spinner" class="load spinner-border text-info hide" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
