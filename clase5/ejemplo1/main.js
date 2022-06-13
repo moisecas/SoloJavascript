@@ -1,3 +1,4 @@
+
 titulo.innerText = "MANDAFRUTA.COM"
 slogan.innerText = "Tu Ecommerce favorito de alimentos saludables"
 
