@@ -30,3 +30,7 @@ function cargarproductos(){ //ejecuto
 }
 cargarproductos() //llamo a la función  
 
+
+
+
+
