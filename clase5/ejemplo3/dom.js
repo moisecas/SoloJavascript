@@ -34,3 +34,16 @@ for(valor in div){ //itero sobre el array de elementos html
 
 
 //conseguir elemento por clase 
+var rojos = document.getElementsByClassName("rojo") //capturar el contenido de un elemento html, selecciono la clase rojo 
+var divs;
+for(divs in rojos){
+    rojos[divs].style.background = "red" //cambiar el color de fondo de un elemento html, a rojos le paso el elemento divs que estoy iterando 
+} //itero sobre el array de elementos html
+
+rojos[0].style.background = "red" //cambiar el color de fondo de un elemento html  
+console.log(rojos) //muestro el contenido del elemento html
+
+
+//Query Selector 
+const id = document.querySelector("#encabezado") //capturar el contenido de un elemento html
+console.log(id) //muestro el contenido del elemento html
