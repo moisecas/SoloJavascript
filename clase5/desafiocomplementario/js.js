@@ -16,4 +16,7 @@ function verificarcredito(){
     }else{
         alert("No hay viabilidad para el crédito, por el salario");
     }
+    var boton = document.getElementById("boton");
+    boton.style.backgroundColor = "red";
 }
+
