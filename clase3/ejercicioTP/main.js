@@ -1,18 +1,24 @@
 //simulador de credito 
-const nombre = prompt("Ingrese su nombre");
-alert(`Hola ${nombre}`); //concatenacion de string 
+const nombre = document.getElementById("nombre"); 
+console.log(nombre); //muestro el nombre del interesado 
 
-function credito(monto, plazo, interes) {
+ 
+
+function credito(monto, plazo, interes){
+    
     let intereses = monto * (interes / 100);
     let total = monto + intereses;
     let cuota = total / plazo;
     //return `El monto total a pagar es ${total} y la cuota mensual es ${cuota}`;
-    alert(nombre + ' su cuota es de ' + cuota); 
+    document.getElementById("resultado").innerHTML = `El monto total a pagar es ${total} y la cuota mensual es ${cuota}`;  //muestro el monto total a pagar y la cuota mensual
 }
-let monto = parseInt(prompt("Ingrese el monto que necesita para su crédito"));
-let plazo = parseInt(prompt("Ingrese el plazo en el que desea pagarlo"));
-let interes = parseInt(prompt("Ingrese el interés que le asigno el asesor"));
+var monto = document.getElementById("cantidad").value;
+var plazo = document.getElementById("plazo").value; //plazo en meses
+var interes = document.getElementById("interes").value; //interes en porcentaje
 credito(monto, plazo, interes);
+
+ 
+
 
 
 

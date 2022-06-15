@@ -7,7 +7,7 @@
     <title>Simulador crédito</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
-    <script defer src="./main.js"></script>
+    
 </head>
 <body>
     <h1>Simulador de crédito</h1>
@@ -17,7 +17,7 @@
     
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Usuario</span>
-          <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1" id="nombre">
         </div>
         
         <div class="input-group mb-3">
@@ -33,21 +33,25 @@
         
         <div class="input-group mb-3">
           <span class="input-group-text">$Cantidad solicitada</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-          <span class="input-group-text">.00</span>
+          <input type="tel" class="form-control" aria-label="Amount (to the nearest dollar)" id="cantidad">
+          <span class="input-group-text"></span>
         </div>
         
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Numero de cuotas" aria-label="Username">
+          <input type="tel" class="form-control" placeholder="Numero de cuotas" aria-label="Username" id="plazo"> 
           <span class="input-group-text"></span>
-          <input type="text" class="form-control" placeholder="Si va a abonar  digite acá" aria-label="Server">
+          <input type="tel" class="form-control" placeholder="Digite el interés" aria-label="Server" id="interes">
         </div>
         
         <div class="input-group">
           <span class="input-group-text">Comentarios</span>
           <textarea class="form-control" aria-label="With textarea"></textarea>
         </div>
-        <button  type="submit">Enviar</button>
+        <button  type="submit" onclick="credito(monto, plazo, interes)">Calcular cuota</button>
+        <div class="cuota" id="resultado">
+
+        </div>
     </form>
+    <script src="./main.js"></script>
 </body>
 </html>
