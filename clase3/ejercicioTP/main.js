@@ -34,13 +34,30 @@ btn2.addEventListener("click", () => {
      mostrardatos(usuario.value, razon.value, cantidad.value, plazo2.value);
 }) 
 
-const email = document.getElementById("email");
+const email = document.getElementById("email"); //evento enter para validar el email
 document.addEventListener("keypress", () => {
     console.log(email.value); 
 if (email.value != ""){
     document.getElementById("solicitud").innerHTML = `Solicitud recibida ${email.value}`;
     }
 })
+
+//guardar datos en local storage
+
+const inputNombre = document.querySelector("#usuario");
+const inputPerfil = document.querySelector("#basic-url");
+const inputEmail = document.querySelector("#email");
+
+function guardardatosdeusuario() { //recupera la información del formulario y la guarda en el localStorage
+    const datosdeusuario={ //objeto literal
+        nombre: inputNombre.value,
+        perfil: inputPerfil.value,
+        email: inputEmail.value
+    }
+    const datosdeusuarioJSON = JSON.stringify(datosdeusuario) //convertir el objeto literal a un string
+    localStorage.setItem("datosusuario",datosdeusuarioJSON)
+}
+guardardatosdeusuario();
 
 
 //usuario, razón del credito, cantidad solicitada y plazo en meses 
