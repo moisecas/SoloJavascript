@@ -48,6 +48,14 @@ const inputNombre = document.querySelector("#usuario");
 const inputPerfil = document.querySelector("#basic-url");
 const inputEmail = document.querySelector("#email");
 
+document.addEventListener("submitform", (e)=>{
+    e.preventDefault();
+    guardardatosdeusuario();
+    alert("Datos guardados satisfactoriamente"); 
+});
+
+
+
 function guardardatosdeusuario() { //recupera la información del formulario y la guarda en el localStorage
     const datosdeusuario={ //objeto literal
         nombre: inputNombre.value,
@@ -55,9 +63,10 @@ function guardardatosdeusuario() { //recupera la información del formulario y l
         email: inputEmail.value
     }
     const datosdeusuarioJSON = JSON.stringify(datosdeusuario) //convertir el objeto literal a un string
-    localStorage.setItem("datosusuario",datosdeusuarioJSON)
+    localStorage.setItem(datosdeusuarioJSON,datosdeusuarioJSON) 
 }
-guardardatosdeusuario();
+
+
 
 
 //usuario, razón del credito, cantidad solicitada y plazo en meses 
