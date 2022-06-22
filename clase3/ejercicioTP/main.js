@@ -16,9 +16,10 @@ let monto = document.getElementById("cantidad");
 let plazo = document.getElementById("plazo"); //plazo en meses
 let interes = document.getElementById("interes"); //interes en porcentaje
 
-let btn = document.getElementById("btn"); //boton para calcular el credito 
+let btn = document.getElementById("submit"); //boton para calcular el credito 
 btn.addEventListener("click", () => {
      credito(monto.value, plazo.value, interes.value);
+      
 }) 
 
 function mostrardatos(usuario,razon,cantidad,plazo2){
@@ -42,34 +43,10 @@ if (email.value != ""){
     }
 })
 
-//guardar datos en local storage
-
-const inputNombre = document.querySelector("#usuario");
-const inputPerfil = document.querySelector("#basic-url");
-const inputEmail = document.querySelector("#email");
-
-document.addEventListener("submitform", (e)=>{
-    e.preventDefault();
-    guardardatosdeusuario();
-    alert("Datos guardados satisfactoriamente"); 
-});
+   
 
 
 
-function guardardatosdeusuario() { //recupera la información del formulario y la guarda en el localStorage
-    const datosdeusuario={ //objeto literal
-        nombre: inputNombre.value,
-        perfil: inputPerfil.value,
-        email: inputEmail.value
-    }
-    const datosdeusuarioJSON = JSON.stringify(datosdeusuario) //convertir el objeto literal a un string
-    localStorage.setItem(datosdeusuarioJSON,datosdeusuarioJSON) 
-}
-
-
-
-
-//usuario, razón del credito, cantidad solicitada y plazo en meses 
 
 
 
