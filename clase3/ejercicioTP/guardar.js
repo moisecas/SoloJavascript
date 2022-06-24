@@ -13,7 +13,7 @@ function guardardatosdeusuario() { //recupera la información del formulario y l
         email: inputEmail.value
     }
     const datosdeusuarioJSON = JSON.stringify(datosdeusuario) //convertir el objeto literal a un string
-    localStorage.setItem(datosdeusuarioJSON,datosdeusuarioJSON) 
+    localStorage.setItem("user",datosdeusuarioJSON) 
 }
 
 let guardar = document.getElementById("submit");
