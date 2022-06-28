@@ -7,6 +7,7 @@ const inputEmail = document.querySelector("#email");
 
 
 function guardardatosdeusuario() { //recupera la información del formulario y la guarda en el localStorage
+
     const datosdeusuario={ //objeto literal
         nombre: inputNombre.value,
         perfil: inputPerfil.value,
@@ -14,6 +15,7 @@ function guardardatosdeusuario() { //recupera la información del formulario y l
     }
     const datosdeusuarioJSON = JSON.stringify(datosdeusuario) //convertir el objeto literal a un string
     localStorage.setItem("user",datosdeusuarioJSON) 
+    Swal.fire('Datos guardados')
 }
 
 let guardar = document.getElementById("submit");

@@ -2,6 +2,19 @@
 const nombre = document.getElementById("usuario"); 
 console.log(nombre); //muestro el nombre del interesado 
 
+//funcion para verificar los campos obligatorios
+function validar(){
+    let interes = document.getElementById("interes").value;
+    let cantidad = document.getElementById("cantidad").value;
+    let plazo = document.getElementById("plazo").value;
+   if(interes == "" || cantidad == "" || plazo == ""){
+       alert("Todos los campos son obligatorios");
+       return false;
+   }
+ 
+
+    return true;//si no falta ningun dato, se ejecuta la función
+}
  
 
 function credito(monto, plazo, interes){
