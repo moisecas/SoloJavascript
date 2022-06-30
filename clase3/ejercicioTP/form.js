@@ -17,6 +17,10 @@ const objdatos = {
     correo: correo,
     telefono: telefono
 }
+//funcion mostrar datos en html
+function mostrardatos(){
+    document.getElementById("resultado").innerHTML = `Nombre: ${objdatos.nombre} \nId: ${objdatos.id} \nCorreo: ${objdatos.correo} \nTelefono: ${objdatos.telefono}`;
+}
 
 
 
