@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./contacto.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <nav class="page__menu menu">
+        <ul class="menu__list r-list">
+          <li class="menu__group"><a href="./index.html" class="menu__link r-link text-underlined">Simulador</a></li>
+          <li class="menu__group"><a href="./form.html" class="menu__link r-link text-underlined">Formulario</a></li>
+          <li class="menu__group"><a href="./about.html" class="menu__link r-link text-underlined">Nosotros</a></li> 
+          <li class="menu__group"><a href="./signin.html" class="menu__link r-link text-underlined">Inicio sesión</a></li> 
+          <li class="menu__group"><a href="./contacto.html" class="menu__link r-link text-underlined">Contacto</a></li>
+        </ul>
+      </nav>
+     
+
+    <form id="form" action="https://formspree.io/f/moqrowpd" method="POST">
+
+        <label>Email:</label>
+        <input type="email" name="email" />
+        <label>Nombres:</label>
+        <input type="text" name="message" />
+        <label>Apellidos:</label>
+        <input type="text" name="message" />
+        <label>Número de contacto:</label>
+        <input type="text" name="message" />
+        <label>¿Cómo se entero de nosostros?:</label>
+        <input type="text" name="message" placeholder="Redes sociales, referid@, correo, Google, otros"/>
+        <label>Su mensaje</label>
+        <textarea class="form-control" name="mesaage" id="" cols="60" rows="7"></textarea>
+        <!-- <input type="text" name="message" /> -->
+        
+        <button type="submit">Enviar</button>
+    </form>
+    <script src="./apiemail.js" ></script> 
+</body>
+</html>

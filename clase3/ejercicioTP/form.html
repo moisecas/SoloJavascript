@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./main.css"> 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="./form.js"></script> 
+    
 </head>
 <body>
     <div class="page">
@@ -21,13 +22,14 @@
             <li class="menu__group"><a href="./form.html" class="menu__link r-link text-underlined">Formulario</a></li>
             <li class="menu__group"><a href="./about.html" class="menu__link r-link text-underlined">Nosotros</a></li> 
             <li class="menu__group"><a href="./signin.html" class="menu__link r-link text-underlined">Inicio sesión</a></li> 
+            <li class="menu__group"><a href="./contacto.html" class="menu__link r-link text-underlined">Contacto</a></li>
           </ul>
         </nav>
      
       </div>
     <div class="form"> 
         <h1>Formulario aspirante a crédito</h1>
-        <form action="">
+        <form>
             <label for="">Nombre completo</label>
             <input type="text" id="nombre">
             <label for="">ID o identificación</label>
@@ -51,13 +53,17 @@
             <input type="tel" id="laboral">
             <input type="button" value="Envíar" id="boton" onclick="capturardatosinteresado()"> 
             <input type="button" value="Viabilidad crediticia" id="boton" onclick="verificarcredito()">
+            <button type="submit">Enviar datos</button> 
             <div>
                 <p id="resultado"></p>
+                
             </div>
 
         </form>
 
+
     </div>
+   
     
 </body>
 </html>
