@@ -16,7 +16,7 @@ nav button{
 
 
 body {
-    background-image: url(../ejercicioTP/img1.jpg);
+    background-image: url(./img1.jpg); 
 }
 form {
     width: 50%;
