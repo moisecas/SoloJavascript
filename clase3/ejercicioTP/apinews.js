@@ -21,8 +21,15 @@ async function fetchData(urlApi){
     try {
         const news = await fetchData(API)
         //template literal para que se pueda usar el json 
-        let view = `<ul>${news.coins.map(coin => `<li>${coin.name}</li>`).join('')}</ul>`
-        content.innerHTML = view
+        let view = 
+        `
+        <ul>
+        ${news.map(coin => `<li>${coin.name}</li>`).join('')}
+        </ul>
+        
+        `
+
+      content.innerHTML = view
     } catch (error) {
         console.log(error) 
         alert('error') 
