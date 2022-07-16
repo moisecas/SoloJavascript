@@ -37,10 +37,3 @@ async function fetchData(urlApi) {
         alert('Error'); //en caso de que no se pueda obtener el json se muestra una alerta en pantalla 
     }
 })(); //sentencia que ejecuta nuestra función de forma asincrona  
- 
-
-
-
-
-
-
